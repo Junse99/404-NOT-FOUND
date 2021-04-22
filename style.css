@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap');
+
+:root{
+  --subtitleColor : #4F4F4F;
+  --mainColor : #333333;
+  --footerColor: #BDBDBD;
+}
+
+h1, h2,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 24px;
+  background-color: #ffffff;
+}
+
+body {
+  font-family: 'Space Mono';
+  letter-spacing: -0.035em;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: var(--mainColor);
+}
+
+.container {
+  max-width: 1150px;
+  display: grid;
+  max-height: 100vh;
+  height: 100vh;
+  margin: auto;
+  grid-template: auto 1fr auto / 1fr 1fr;
+  grid-template-areas: 
+    "header header"
+    "main aside"
+    "footer footer"
+    ;
+}
+
+.header{
+  grid-area: header;
+  font-family: 'Inconsolata';
+}
+
+.header h2 {
+  font-size: 24px;
+  padding: 1rem;
+}
+
+.main {
+  grid-area: main;
+  display: flex;
+  margin: auto;
+}
+
+.main img {
+  max-width: 450px;
+  margin: auto;
+}
+
+.aside {
+  grid-area: aside;
+  display: flex;
+  margin: auto;
+}
+
+.content-aside{
+  width: 100%;
+}
+
+.aside h1 {
+  font-size: 64px;
+  font-weight: bold;
+  line-height: 95px;
+}
+
+.aside p {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+  color: var(--subtitleColor);
+  width: 75%;
+  margin: 1rem 0;
+}
+
+.aside button {
+  width: 216px;
+  height: 68px;
+  background-color: var(--mainColor);
+  border: 0;
+  color: #fff;
+  font-size: 14px;
+}
+
+.footer {
+  grid-area: footer;
+  color: var(--footerColor);
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  margin: auto;
+  padding-bottom: .5rem;
+}
+
+.footer p  b{
+  text-decoration: underline;
+}
+
+@media (max-width: 780px) {
+
+  body{
+    padding: 1rem;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "aside"
+      "footer";
+  }
+
+  .header h2 {
+    padding: 0;
+  }
+  .main img {
+
+    height: 500px;
+    object-fit: contain;
+  }
+
+  .aside p {
+    width: 100%;
+  }
+
+  .footer{
+    padding: 1rem 0;
+  }
+
+}
+
