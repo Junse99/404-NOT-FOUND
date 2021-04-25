@@ -75,13 +75,16 @@ body {
 
 .aside h1 {
   font-size: 64px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 95px;
+  font-style: normal;
+  letter-spacing: -0.035em;
 }
 
 .aside p {
   font-weight: normal;
   font-size: 24px;
+  font-style: normal;
   line-height: 36px;
   color: var(--subtitleColor);
   width: 75%;
@@ -137,8 +140,15 @@ body {
     object-fit: contain;
   }
 
-  .aside p {
+  .aside h1 {
     width: 100%;
+    font-size: 48px;
+    line-height: 71px;
+    font-weight: bold;
+  }
+
+  .aside p {
+    font-size: 18px;
   }
 
   .footer{
